@@ -42,13 +42,10 @@ class PlaySoundsViewController: UIViewController {
         case .reverb:
             playSound(reverb: true)
         }
-        
         configureUI(.playing)
     }
     
-    @IBAction func stopButtonPressed(_ sender: AnyObject) {
-        stopAudio()
-    }
+    @IBAction func stopButtonPressed(_ sender: AnyObject) {stopAudio()}
     
     override func viewDidLoad() {
         super.viewDidLoad()
