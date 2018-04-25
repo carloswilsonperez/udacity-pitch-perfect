@@ -17,6 +17,11 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordingButton: UIButton!
     @IBOutlet weak var stopRecordingButton: UIButton!
     
+    func configureButtons(_ enabled: Bool) {
+        stopRecordingButton.isEnabled = enabled
+        recordingButton.isEnabled = !enabled
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         stopRecordingButton.isEnabled = false
